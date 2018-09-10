@@ -16,3 +16,13 @@ func BandNameGenerator(word string) string {
 	}
 	return "Error! There are non character in the string"
 }
+
+func BandNameGenerator2(word string) string {
+	//word = strings.ToLower(word)
+	if word[0] == word[len(word)-1] {
+		return strings.Title(word + word[1:])
+	} else {
+		return "The " + strings.Title(word)
+	}
+	return "Error! There are non character in the string"
+}
