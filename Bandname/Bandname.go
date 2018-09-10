@@ -6,8 +6,8 @@ import (
 )
 
 func BandNameGenerator(word string) string {
-	word = strings.ToLower(word)
-	reg := regexp.MustCompile(`(\w)(\w*)(\w)`)
+	//word = strings.ToLower(word)
+	reg := regexp.MustCompile(`(\w)(\S*)(\w)`)
 	result := reg.FindStringSubmatch(word)
 	if result[1] == result[3] {
 		return strings.ToUpper(result[1]) + result[2] + result[3] + result[2] + result[3]
